@@ -28,12 +28,28 @@
 		            <li class="active"><a href="#">Home</a></li>
 		            <li><a href="#">#Discover</a></li>
 		            <li><a href="#">@Me</a></li>
-		            <li>
-		            	<span class="new-info badge">8</span>
-		            </li>
+
 	            </ul>
 	            
 		        <ul class="nav pull-right">
+		            <li class="dropdown top-reminder">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">提醒
+							<span class="reminder-number">(8)</span>
+							<b class="caret"></b>
+						</a>
+						
+
+						<ul class="dropdown-menu reminder-frame">
+						<!-- If feed has both # and @ -->
+							<li><a href="#"><small>#心理学导论#</small><span>zhuth</span>@了你</a></li>
+							<li><a href="#"><span>hokashao</span>@了你</a></li>
+							<li><a href="#"><span>hokashao</span>回复了你说的</a></li>
+							<li><a href="#">你有<span>2</span>条新私信</a></li>
+						</ul>
+		   
+					</li>
+					
+		        	
 		            <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">UserName <b class="caret"></b></a>
 						<ul class="dropdown-menu">
@@ -249,6 +265,62 @@
 					<span class="course-name">心理学导论</span>
 					<span class="course-teacher">(吴国宏)</span>
 				#</span>
+	
+				<span class="feeds-timestamp">2小时前</span>
+			</div>
+			<div class="feeds-item-content">
+				<p class="feeds-text">
+					<a href="">@Hokashao</a>
+					<a href="">@朱恬骅</a>
+					米池！卷土重来！
+				</p>	
+			</div>
+			
+			<!-- Feeds-Item-Footer -->
+			<div class="feeds-item-footer">
+			<ul class="feeds-item-status inline text-left">
+				<li id="can-expand" class="icon-chevron-down icon-grey"></li>
+				<li id="have-pics" class="icon-picture icon-grey"></li>
+			</ul>
+			
+			
+			<ul class="feeds-actions inline text-right">
+				<li class="feeds-reply-container">
+					<a class="feeds-reply-button" href="#" title="Reply">
+						<i class="icon-arrow-left icon-grey"></i>
+						<span>回6</span>
+					</a>
+				</li>
+				<li class="feeds-share-container">
+					<a class="feeds-share-button" href="#" title="Share">
+						<i class="icon-share-alt icon-grey"></i>
+						<span>转7</span>
+					</a>
+				</li>
+				<li class="feeds-favorite-container">
+					<a class="feeds-favorite-button" href="#" title="Favorite">
+						<i class="icon-star-empty icon-grey"></i>
+						<span class="notfavorited">收12</span>
+						<span class="favorited">已收</span>
+					</a>
+				</li>
+			</ul>
+			</div>	
+		</li>
+
+			
+		<li class="feeds-item">
+			<div class="feeds-item-header">
+				<a class="account-group">
+					<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+					
+					<strong class="username">Riceman Huang</strong>
+				</a>
+				
+				<span class="feeds-item-course">#
+					<span class="course-name">心理学导论</span>
+					<span class="course-teacher">(吴国宏)</span>
+				#</span>
 				
 				<span class="feeds-timestamp">2小时前</span>
 				<p class="feeds-text">
@@ -284,7 +356,9 @@
 	
 	<!-- Feeds End-->
 	<div class="feeds-end">
-	<img src="img/loader.gif" alt="Loading">
+		<!-- If Loading -->
+		<img src="img/loader.gif" alt="Loading"> 
+		<!-- If No More Feeds -->
 		<a href="#">Back to top ↑</a>
 	</div>
 
@@ -313,6 +387,7 @@
 <script src="js/bootstrap.js"></script>
 
 <script src="js/speak.js"></script>
+<script src="js/feeds.js"></script>
 
 </body>
   

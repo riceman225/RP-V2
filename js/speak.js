@@ -14,5 +14,15 @@ $(document).ready(function(){
 		}
 	});
 
+	var maxLength = 225; // max number of allowed characters
+	$('.rich-speak-text').keyup(function() {
+		$(this).val($(this).val().substr(0, maxLength));
+		$('.speak-word-counter').text(maxLength - $(this).val().length);
+	});
 
 });
+
+
+
+
+

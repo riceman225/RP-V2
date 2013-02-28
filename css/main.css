@@ -10,6 +10,10 @@ body {
 	padding-bottom: 40px;
 }
 
+.row-fluid .span4 {
+width: 286px;
+}
+
 .narrow-container {
 	margin: 0 auto;
 	max-width:960px;
@@ -22,13 +26,11 @@ body {
 
 /* Top Navbar */
 
-.navbar .new-info {
-    padding: 1px 7px;
-    margin: 12px -3px;
+.navbar .reminder-number {
+	padding: 1px 5px;
+	margin: 12px 0;
     line-height: 16px;
-    border-radius: 2px 2px 2px 2px;
-	background-color: rgba(255,255,255,0.95);
-	color:#333;
+	color:#fff;
 }
 
 .navbar .brand {
@@ -46,6 +48,27 @@ body {
 
 .navbar .nav .dropdown-menu {
 	min-width: 60px;
+}
+
+.dropdown-menu > li > a  {
+	color:#333;
+}
+
+.reminder-frame a span {
+	color:#0088cc;
+	padding-right:3px;
+	padding-left:3px;
+}
+
+.reminder-frame a small {
+	color:#7c7c7c;
+	padding-right:3px;
+	padding-left:3px;
+}
+
+.dropdown-menu > li > a:hover > span,
+.dropdown-menu > li > a:hover > small {
+	color: #ffffff;
 }
 
 
@@ -128,7 +151,7 @@ body {
 
 .mini-profile-stats ul li a {
 	float: left;
-	padding: 9px 22.5px;
+	padding: 9px 22px;
 	color: #999;
 	font-size: 12px;
 	line-height: 18px;
@@ -223,7 +246,7 @@ body {
 	line-height: 20em;  
 	vertical-align: middle;  
 }  
-.btn_addPic:hover em{background-position:-60px -590px;}  
+.btn_addPic:hover em{background-position:-60px -590px;}
 .filePrew {  
 	display: block;  
 	position: absolute;  
@@ -383,10 +406,24 @@ body {
 	color: #777;
 }
 
+.feeds-actions i {
+	margin-top:0;
+}
+
+.feeds-actions a:hover {
+	color:#333;
+}
+
+.feeds-favorite-container .favorited {
+	color:#111;
+	display: none;
+}
+
+
 /* Account Group */
 .username {
 	font-weight: bold;
-	color: #333;
+	color: #333333;
 	cursor:pointer;
 }
 
