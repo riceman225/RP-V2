@@ -13,6 +13,10 @@ $(document).ready(function(){
 		$(this).removeClass("item-activated");
 	});
 	
+	
+
+
+
 //New Feeds Click
 	$(".new-feeds-bar").click(function(){
 		$(this).hide();
@@ -74,4 +78,25 @@ $(document).ready(function(){
 	});
 
 
+// Seperate Single Feed
+// If the first feed is clicked
+
+
+	$(".feeds-item:first").click(function(){
+		$(".item-activated").toggleClass("first-feed-item-click");
+	});
+
+	
+// If not the first feed is clicked	
+	$(".feeds-item").click(function(){
+		$(".item-activated").toggleClass("feeds-item-click");
+		$(".item-activated").prev(".feeds-item").toggleClass("sep-prev-feed");
+		$(".item-activated").next(".feeds-item").toggleClass("sep-next-feed");
+	});
+
+
 });
+
+
+
+
