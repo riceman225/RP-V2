@@ -172,7 +172,6 @@
 	<div class="feeds-content">
 	<ol class="unstyled">
 	
-		<!-- 1 New Feeds Begin -->
 		<li class="feeds-item">
 			<div class="feeds-body">
 				<div class="feeds-item-header">
@@ -212,12 +211,14 @@
 							<span>回18</span>
 						</a>
 					</li>
+
 					<li class="feeds-share-container">
-						<a class="feeds-share-button" href="#" title="Share">
-							<i class="icon-share-alt icon-grey"></i>
-							<span>转7</span>
+						<!-- Button to trigger share modal -->
+						<a class="feeds-share-button" href="#ShareModal">
+							<i class="icon-share-alt icon-grey"></i><span>转7</span>
 						</a>
 					</li>
+
 					<li class="feeds-favorite-container">
 						<a class="feeds-favorite-button" href="#" title="Favorite">
 							<i class="icon-star-empty icon-grey"></i>
@@ -250,11 +251,40 @@
 				</div>
 				<div class="replies-wrapper">
 					<ol>
+						<li class="replies-item">
+							<div class="replies-item-header">
+								<a class="account-group">
+									<img class="replies-user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+									<div class="username">朱恬骅</div>
+								</a>
+							</div>
+							<div class="replies-item-content">
+								<p>你前端写的太慢啦！！！</p>
+								<span>
+									<a class="replies-actions">回复</a>
+								</span>
+							</div>
+
+						</li>
+						<li class="replies-item">
+							<div class="replies-item-header">
+								<a class="account-group">
+									<img class="replies-user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+									<div class="username">Hoka Shao</div>
+								</a>
+							</div>
+							<div class="replies-item-content">
+								<p><a>@朱恬骅</a> 我也觉得！！！</p>
+								<span>
+									<a class="replies-actions">回复</a>
+								</span>
+							</div>
+						</li>
 					</ol>
 				</div>
-			</div>
+			</div>						
 		</li>
-		<!-- 1 New Feeds End -->	
+	
 	
 		<li class="feeds-item">
 			<div class="feeds-body">
@@ -295,12 +325,14 @@
 							<span>回18</span>
 						</a>
 					</li>
+					
 					<li class="feeds-share-container">
-						<a class="feeds-share-button" href="#" title="Share">
-							<i class="icon-share-alt icon-grey"></i>
-							<span>转7</span>
+						<!-- Button to trigger share modal -->
+						<a class="feeds-share-button" href="#ShareModal">
+							<i class="icon-share-alt icon-grey"></i><span>转7</span>
 						</a>
 					</li>
+					
 					<li class="feeds-favorite-container">
 						<a class="feeds-favorite-button" href="#" title="Favorite">
 							<i class="icon-star-empty icon-grey"></i>
@@ -695,7 +727,27 @@
 	
 	</div>
 	
-	<!-- Feeds End-->
+	<!-- Modal 转发小弹窗 -->
+	<div id="ShareModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="ShareModalTitle">转发一记~</h3>
+		</div>
+		<div class="modal-body">
+		<div class="">
+			<div class="original-feed-header feeds-item-header"></div>
+			<div class="original-feed-content feeds-item-content">
+				<p>我是原内容</p>
+			</div>
+		</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary">分享</button>
+		</div>
+	</div>
+	
+	
+	<!-- Feeds Flow Bottom-->
 	<div class="feeds-end">
 		<!-- Default -->
 		<a href="#">More</a>
@@ -735,6 +787,7 @@
 <script src="js/speak.js"></script>
 
 <!-- Textarea 自适应大小-->
+
 <script src="js/textarea.js"></script>
 
 <!-- At.js -->

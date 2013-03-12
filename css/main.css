@@ -120,6 +120,14 @@ button.btn-small {
 	font-size:12px;
 }
 
+.btn-cancel {
+	background: #777;
+}
+
+.btn-cancel:hover, .btn-cancel:focus {
+	background: #999;
+}
+
 .btn-toolbar .btn.active {
   color: white; }
 
@@ -357,6 +365,7 @@ button.btn-small {
 	-moz-box-shadow: none;
 	box-shadow: none;
 	border:1px solid #f3f3f3;
+	background-color: #fcfcfc;
 }
 
 /* Rich Compose Box */
@@ -624,9 +633,6 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 	margin:0;
 }
 
-.feeds-actions {
-	visibility: hidden;
-}
 
 .feeds-item-footer ul {
 	display: inline;
@@ -701,25 +707,25 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 	cursor:pointer;
 }
 
-.feeds-comment-container .ui-icon-comment {
-	background-image: url("../img/ui-icons_888888_256x240.png");
-	background-position: -128px -96px;
-	width: 16px;
-	height: 16px;
-	display: inline-block;
-	margin-bottom: -2px;
-	margin-right: -2px;
-}
-
-.feeds-comment-container .ui-icon-comment-hover {
-	background-image: url("../img/ui-icons_454545_256x240.png");
-	background-position: -128px -96px;
-	width: 16px;
-	height: 16px;
-	display: inline-block;
-	margin-bottom: -2px;
-	margin-right: -2px;
-}
+	.ui-icon-comment {
+		background-image: url("../img/ui-icons_888888_256x240.png");
+		background-position: -128px -96px;
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+		margin-bottom: -2px;
+		margin-right: -2px;
+	}
+	
+	.ui-icon-comment-hover {
+		background-image: url("../img/ui-icons_454545_256x240.png");
+		background-position: -128px -96px;
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+		margin-bottom: -2px;
+		margin-right: -2px;
+	}
 
 
 /* Feed Replies */
@@ -856,6 +862,10 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 
 }
 
+/* Share Modal */
+#ShareModal h3 {
+	font-size:16px;
+}
 
 /* Account Group */
 .account-group {
