@@ -6,12 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Bootstrap CSS-->
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
-	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
-	<link href="css/bootstrap-responsive.css" rel="stylesheet">
-
-	<link href="css/main.css" rel="stylesheet" media="screen">
-
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen" />
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" />
+	<link href="css/main.css" rel="stylesheet" media="screen" />
+	<link href="css/css-lib/jquery.atwho.css" rel="stylesheet" type="text/css"/>
+	
 </head>
   
   
@@ -20,6 +20,7 @@
 <div class="narrow-container">
 
 <!-- Top Navigation Bar Begins -->
+
 <div class="navbar navbar-inverse navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container-fluid narrow-container">
@@ -41,7 +42,6 @@
 						
 
 						<ul class="dropdown-menu reminder-frame">
-						<!-- If feed has both # and @ -->
 							<li><a href="#"><small>#心理学导论#</small><span>zhuth</span>@了你</a></li>
 							<li><a href="#"><span>hokashao</span>@了你</a></li>
 							<li><a href="#"><span>hokashao</span>回复了你说的</a></li>
@@ -63,8 +63,8 @@
 		</div>
 	</div>	
 </div>
-<!-- Top Navigation Bar Ends -->
 
+<!-- Top Navigation Bar Ends -->
 
 
 <div class="container-fluid">
@@ -107,6 +107,7 @@
 		</form>
 		</div>
 		
+		
 		<div class="rich-speak-box hide">
 		<form class="rich-speak-form" method="post" target="" action="">
 		    <div class="rich-composebox-content">  
@@ -127,7 +128,7 @@
 	
 	
 <!-- My Courses -->	
-	<div class="well sidebar-nav">
+	<div class="well sidebar-nav my-courses">
 		<ul class="nav nav-list">
               <li class="nav-header my-courses-header">My Courses</li>
               <li class="active"><a href="#">心理学导论 (吴国宏)</a></li>
@@ -172,315 +173,521 @@
 	<ol class="unstyled">
 	
 		<!-- 1 New Feeds Begin -->
-		<li class="feeds-item new-feeds">
-			<div class="feeds-item-header">
-				<a class="account-group">
-					<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+		<li class="feeds-item">
+			<div class="feeds-body">
+				<div class="feeds-item-header">
+					<a class="account-group">
+						<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+						
+						<span class="username">Riceman Huang</span>
+					</a>
 					
-					<strong class="username">Riceman Huang</strong>
-				</a>
+					<span class="feeds-item-course">#
+						<span class="course-name">心理学导论</span>
+						<span class="course-teacher">(吴国宏)</span>
+					#</span>
+		
+					<span class="feeds-timestamp">2小时前</span>
+				</div>
+				<div class="feeds-item-content">
+					<p class="feeds-text">
+						<a id="user-id">@Hokashao</a>
+						<a id="user-id">@朱恬骅</a>
+						我是演示回复框的
+					</p>	
+				</div>
 				
-				<span class="feeds-item-course">#
-					<span class="course-name">心理学导论</span>
-					<span class="course-teacher">(吴国宏)</span>
-				#</span>
+				<!-- Feeds-Item-Footer -->
+				<div class="feeds-item-footer">
+				<ul class="feeds-item-status inline text-left">
+					<li id="can-expand" class="icon-chevron-down icon-grey"></li>
+					<li id="have-pics" class="icon-picture icon-grey"></li>
+				</ul>
 				
-				<span class="feeds-timestamp">2小时前</span>
-				<p class="feeds-text">
-					米池！卷土重来！
-				</p>
+				
+				<ul class="feeds-actions inline text-right">
+					<li class="feeds-comment-container">
+						<a class="feeds-comment-button">
+							<i class="ui-icon-comment" href="#"></i>
+							<span>回18</span>
+						</a>
+					</li>
+					<li class="feeds-share-container">
+						<a class="feeds-share-button" href="#" title="Share">
+							<i class="icon-share-alt icon-grey"></i>
+							<span>转7</span>
+						</a>
+					</li>
+					<li class="feeds-favorite-container">
+						<a class="feeds-favorite-button" href="#" title="Favorite">
+							<i class="icon-star-empty icon-grey"></i>
+							<span class="notfavorited">收12</span>
+						</a>
+						
+						<a class="feeds-favorite-button-done hide" href="#" title="Favorite">
+							<i class="icon-star"></i>
+							<span class="favorited">已收</span>
+						</a>
+						
+					</li>
+				</ul>
+				</div>	
+			</div>
+			
+			<!-- Feed-Replies -->
+			<div class="feed-replies hide">
+				<div class="reply-box">
+					<form>	
+						<textarea class="mini-reply-box" placeholder="亲，回点啥吧~"></textarea>
+						<div class="reply-box-actions">
+							<div class="reply-checkbox"><input type="checkbox" checked>发送到我的新鲜事</div>
+							<div class="feed-reply-button pull-right">
+								<span class="reply-word-counter">225</span>
+								<button type="button" class="btn btn-small" data-loading-text="发布ing...">回复</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="replies-wrapper">
+					<ol>
+					</ol>
+				</div>
 			</div>
 		</li>
 		<!-- 1 New Feeds End -->	
 	
 		<li class="feeds-item">
-			<div class="feeds-item-header">
-				<a class="account-group">
-					<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+			<div class="feeds-body">
+				<div class="feeds-item-header">
+					<a class="account-group">
+						<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+						
+						<span class="username">Riceman Huang</span>
+					</a>
 					
-					<strong class="username">Riceman Huang</strong>
-				</a>
+					<span class="feeds-item-course">#
+						<span class="course-name">心理学导论</span>
+						<span class="course-teacher">(吴国宏)</span>
+					#</span>
+		
+					<span class="feeds-timestamp">2小时前</span>
+				</div>
+				<div class="feeds-item-content">
+					<p class="feeds-text">
+						<a id="user-id">@Hokashao</a>
+						<a id="user-id">@朱恬骅</a>
+						我是演示回复框的
+					</p>	
+				</div>
 				
-				<span class="feeds-item-course">#
-					<span class="course-name">心理学导论</span>
-					<span class="course-teacher">(吴国宏)</span>
-				#</span>
-	
-				<span class="feeds-timestamp">2小时前</span>
+				<!-- Feeds-Item-Footer -->
+				<div class="feeds-item-footer">
+				<ul class="feeds-item-status inline text-left">
+					<li id="can-expand" class="icon-chevron-down icon-grey"></li>
+					<li id="have-pics" class="icon-picture icon-grey"></li>
+				</ul>
+				
+				
+				<ul class="feeds-actions inline text-right">
+					<li class="feeds-comment-container">
+						<a class="feeds-comment-button">
+							<i class="ui-icon-comment" href="#"></i>
+							<span>回18</span>
+						</a>
+					</li>
+					<li class="feeds-share-container">
+						<a class="feeds-share-button" href="#" title="Share">
+							<i class="icon-share-alt icon-grey"></i>
+							<span>转7</span>
+						</a>
+					</li>
+					<li class="feeds-favorite-container">
+						<a class="feeds-favorite-button" href="#" title="Favorite">
+							<i class="icon-star-empty icon-grey"></i>
+							<span class="notfavorited">收12</span>
+						</a>
+						
+						<a class="feeds-favorite-button-done hide" href="#" title="Favorite">
+							<i class="icon-star"></i>
+							<span class="favorited">已收</span>
+						</a>
+						
+					</li>
+				</ul>
+				</div>	
 			</div>
-			<div class="feeds-item-content">
-				<p class="feeds-text">
-					<a href="">@Hokashao</a>
-					<a href="">@朱恬骅</a>
-					我是演示回复框的
-				</p>	
-			</div>
-			
-			<!-- Feeds-Item-Footer -->
-			<div class="feeds-item-footer">
-			<ul class="feeds-item-status inline text-left">
-				<li id="can-expand" class="icon-chevron-down icon-grey"></li>
-				<li id="have-pics" class="icon-picture icon-grey"></li>
-			</ul>
-			
-			
-			<ul class="feeds-actions inline text-right">
-				<li class="feeds-comment-container">
-					<a class="feeds-comment-button">
-						<i class="ui-icon-comment" href="#"></i>
-						<span>回18</span>
-					</a>
-				</li>
-				<li class="feeds-share-container">
-					<a class="feeds-share-button" href="#" title="Share">
-						<i class="icon-share-alt icon-grey"></i>
-						<span>转7</span>
-					</a>
-				</li>
-				<li class="feeds-favorite-container">
-					<a class="feeds-favorite-button" href="#" title="Favorite">
-						<i class="icon-star-empty icon-grey"></i>
-						<span class="notfavorited">收12</span>
-					</a>
-					
-					<a class="feeds-favorite-button-done hide" href="#" title="Favorite">
-						<i class="icon-star"></i>
-						<span class="favorited">已收</span>
-					</a>
-					
-				</li>
-			</ul>
-			</div>	
-			
 			
 			<!-- Feed-Replies -->
-			<div class="feed-replies">
+			<div class="feed-replies hide">
 				<div class="reply-box">
-					<form>
-						<input type="text" class="mini-reply-box" placeholder="亲，回点啥吧~">
+					<form>	
+						<textarea class="mini-reply-box" placeholder="亲，回点啥吧~"></textarea>
+						<div class="reply-box-actions">
+							<div class="reply-checkbox"><input type="checkbox" checked>发送到我的新鲜事</div>
+							<div class="feed-reply-button pull-right">
+								<span class="reply-word-counter">225</span>
+								<button type="button" class="btn btn-small" data-loading-text="发布ing...">回复</button>
+							</div>
+						</div>
 					</form>
+				</div>
+				<div class="replies-wrapper">
+					<ol>
+						<li class="replies-item">
+							<div class="replies-item-header">
+								<a class="account-group">
+									<img class="replies-user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+									<div class="username">朱恬骅</div>
+								</a>
+							</div>
+							<div class="replies-item-content">
+								<p>你前端写的太慢啦！！！</p>
+								<span>
+									<a class="replies-actions">回复</a>
+								</span>
+							</div>
+
+						</li>
+						<li class="replies-item">
+							<div class="replies-item-header">
+								<a class="account-group">
+									<img class="replies-user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+									<div class="username">Hoka Shao</div>
+								</a>
+							</div>
+							<div class="replies-item-content">
+								<p><a>@朱恬骅</a> 我也觉得！！！</p>
+								<span>
+									<a class="replies-actions">回复</a>
+								</span>
+							</div>
+						</li>
+					</ol>
 				</div>
 			</div>
 		</li>
 		
 		
 		<li class="feeds-item">
-			<div class="feeds-item-header">
-				<a class="account-group">
-					<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+			<div class="feeds-body">
+				<div class="feeds-item-header">
+					<a class="account-group">
+						<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+						
+						<span class="username">Riceman Huang</span>
+					</a>
 					
-					<strong class="username">Riceman Huang</strong>
-				</a>
+					<span class="feeds-item-course">#
+						<span class="course-name">心理学导论</span>
+						<span class="course-teacher">(吴国宏)</span>
+					#</span>
+		
+					<span class="feeds-timestamp">2小时前</span>
+				</div>
+				<div class="feeds-item-content">
+					<p class="feeds-text">
+						点我，我会单独出列哦亲！
+					</p>	
+				</div>
 				
-				<span class="feeds-item-course">#
-					<span class="course-name">心理学导论</span>
-					<span class="course-teacher">(吴国宏)</span>
-				#</span>
-	
-				<span class="feeds-timestamp">2小时前</span>
+				<!-- Feeds-Item-Footer -->
+				<div class="feeds-item-footer">
+				<ul class="feeds-item-status inline text-left">
+					<li id="can-expand" class="icon-chevron-down icon-grey"></li>
+					<li id="have-pics" class="icon-picture icon-grey"></li>
+				</ul>
+				
+				
+				<ul class="feeds-actions inline text-right">
+					<li class="feeds-comment-container">
+						<a class="feeds-comment-button">
+							<i class="ui-icon-comment" href="#"></i>
+							<span>回18</span>
+						</a>
+					</li>
+					<li class="feeds-share-container">
+						<a class="feeds-share-button" href="#" title="Share">
+							<i class="icon-share-alt icon-grey"></i>
+							<span>转7</span>
+						</a>
+					</li>
+					<li class="feeds-favorite-container">
+						<a class="feeds-favorite-button" href="#" title="Favorite">
+							<i class="icon-star-empty icon-grey"></i>
+							<span class="notfavorited">收12</span>
+						</a>
+						
+						<a class="feeds-favorite-button-done hide" href="#" title="Favorite">
+							<i class="icon-star"></i>
+							<span class="favorited">已收</span>
+						</a>
+						
+					</li>
+				</ul>
+				</div>	
 			</div>
-			<div class="feeds-item-content">
-				<p class="feeds-text">
-					点击某一个feed以后我会单独出列！
-				</p>	
-			</div>
 			
-			<!-- Feeds-Item-Footer -->
-			<div class="feeds-item-footer">
-			<ul class="feeds-item-status inline text-left">
-				<li id="can-expand" class="icon-chevron-down icon-grey"></li>
-				<li id="have-pics" class="icon-picture icon-grey"></li>
-			</ul>
-			
-			
-			<ul class="feeds-actions inline text-right">
-				<li class="feeds-comment-container">
-					<a class="feeds-comment-button">
-						<i class="ui-icon-comment" href="#"></i>
-						<span>回18</span>
-					</a>
-				</li>
-				<li class="feeds-share-container">
-					<a class="feeds-share-button" href="#" title="Share">
-						<i class="icon-share-alt icon-grey"></i>
-						<span>转7</span>
-					</a>
-				</li>
-				<li class="feeds-favorite-container">
-					<a class="feeds-favorite-button" href="#" title="Favorite">
-						<i class="icon-star-empty icon-grey"></i>
-						<span class="notfavorited">收12</span>
-					</a>
-					
-					<a class="feeds-favorite-button-done hide" href="#" title="Favorite">
-						<i class="icon-star"></i>
-						<span class="favorited">已收</span>
-					</a>
-					
-				</li>
-			</ul>
+			<!-- Feed-Replies -->
+			<div class="feed-replies hide">
+				<div class="reply-box">
+					<form>	
+						<textarea class="mini-reply-box" placeholder="亲，回点啥吧~"></textarea>
+						<div class="reply-box-actions">
+							<div class="reply-checkbox"><input type="checkbox" checked>发送到我的新鲜事</div>
+							<div class="feed-reply-button pull-right">
+								<span class="reply-word-counter">225</span>
+								<button type="button" class="btn btn-small" data-loading-text="发布ing...">回复</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="replies-wrapper">
+					<ol>
+					</ol>
+				</div>
 			</div>
 		</li>
 		
 		
-		
-		
 		<li class="feeds-item">
-			<div class="feeds-item-header">
-				<a class="account-group">
-					<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+			<div class="feeds-body">
+				<div class="feeds-item-header">
+					<a class="account-group">
+						<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+						
+						<span class="username">Riceman Huang</span>
+					</a>
 					
-					<strong class="username">Riceman Huang</strong>
-				</a>
+					<span class="feeds-item-course">#
+						<span class="course-name">心理学导论</span>
+						<span class="course-teacher">(吴国宏)</span>
+					#</span>
+		
+					<span class="feeds-timestamp">2小时前</span>
+				</div>
+				<div class="feeds-item-content">
+					<p class="feeds-text">
+						点我，我会单独出列哦亲！
+					</p>	
+				</div>
 				
-				<span class="feeds-item-course">#
-					<span class="course-name">心理学导论</span>
-					<span class="course-teacher">(吴国宏)</span>
-				#</span>
-	
-				<span class="feeds-timestamp">2小时前</span>
+				<!-- Feeds-Item-Footer -->
+				<div class="feeds-item-footer">
+				<ul class="feeds-item-status inline text-left">
+					<li id="can-expand" class="icon-chevron-down icon-grey"></li>
+					<li id="have-pics" class="icon-picture icon-grey"></li>
+				</ul>
+				
+				
+				<ul class="feeds-actions inline text-right">
+					<li class="feeds-comment-container">
+						<a class="feeds-comment-button">
+							<i class="ui-icon-comment" href="#"></i>
+							<span>回18</span>
+						</a>
+					</li>
+					<li class="feeds-share-container">
+						<a class="feeds-share-button" href="#" title="Share">
+							<i class="icon-share-alt icon-grey"></i>
+							<span>转7</span>
+						</a>
+					</li>
+					<li class="feeds-favorite-container">
+						<a class="feeds-favorite-button" href="#" title="Favorite">
+							<i class="icon-star-empty icon-grey"></i>
+							<span class="notfavorited">收12</span>
+						</a>
+						
+						<a class="feeds-favorite-button-done hide" href="#" title="Favorite">
+							<i class="icon-star"></i>
+							<span class="favorited">已收</span>
+						</a>
+						
+					</li>
+				</ul>
+				</div>	
 			</div>
-			<div class="feeds-item-content">
-				<p class="feeds-text">
-					<a href="">@Hokashao</a>
-					<a href="">@朱恬骅</a>
-					米池！卷土重来！
-				</p>	
-			</div>
 			
-			<!-- Feeds-Item-Footer -->
-			<div class="feeds-item-footer">
-			<ul class="feeds-item-status inline text-left">
-				<li id="can-expand" class="icon-chevron-down icon-grey"></li>
-				<li id="have-pics" class="icon-picture icon-grey"></li>
-			</ul>
-			
-			
-			<ul class="feeds-actions inline text-right">
-				<li class="feeds-comment-container">
-					<a class="feeds-comment-button">
-						<i class="ui-icon-comment" href="#"></i>
-						<span>回18</span>
-					</a>
-				</li>
-				<li class="feeds-share-container">
-					<a class="feeds-share-button" href="#" title="Share">
-						<i class="icon-share-alt icon-grey"></i>
-						<span>转7</span>
-					</a>
-				</li>
-				<li class="feeds-favorite-container">
-					<a class="feeds-favorite-button" href="#" title="Favorite">
-						<i class="icon-star-empty icon-grey"></i>
-						<span class="notfavorited">收12</span>
-					</a>
-					
-					<a class="feeds-favorite-button-done hide" href="#" title="Favorite">
-						<i class="icon-star"></i>
-						<span class="favorited">已收</span>
-					</a>
-					
-				</li>
-			</ul>
+			<!-- Feed-Replies -->
+			<div class="feed-replies hide">
+				<div class="reply-box">
+					<form>	
+						<textarea class="mini-reply-box" placeholder="亲，回点啥吧~"></textarea>
+						<div class="reply-box-actions">
+							<div class="reply-checkbox"><input type="checkbox" checked>发送到我的新鲜事</div>
+							<div class="feed-reply-button pull-right">
+								<span class="reply-word-counter">225</span>
+								<button type="button" class="btn btn-small" data-loading-text="发布ing...">回复</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="replies-wrapper">
+					<ol>
+					</ol>
+				</div>
 			</div>
 		</li>
 
-
 		
 		<li class="feeds-item">
-			<div class="feeds-item-header">
-				<a class="account-group">
-					<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+			<div class="feeds-body">
+				<div class="feeds-item-header">
+					<a class="account-group">
+						<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+						
+						<span class="username">Riceman Huang</span>
+					</a>
 					
-					<strong class="username">Riceman Huang</strong>
-				</a>
-				
-				<span class="feeds-item-course">#
-					<span class="course-name">心理学导论</span>
-					<span class="course-teacher">(吴国宏)</span>
-				#</span>
-	
-				<span class="feeds-timestamp">2小时前</span>
-			</div>
-			<div class="feeds-item-content">
-				<p class="feeds-text">
-					<a href="">@Hokashao</a>
-					<a href="">@朱恬骅</a>
-					米池！卷土重来！
-				</p>	
-			</div>
-			
-			<!-- Feeds-Item-Footer -->
-			<div class="feeds-item-footer">
-			<ul class="feeds-item-status inline text-left">
-				<li id="can-expand" class="icon-chevron-down icon-grey"></li>
-				<li id="have-pics" class="icon-picture icon-grey"></li>
-			</ul>
-			
-			
-			<ul class="feeds-actions inline text-right">
-				<li class="feeds-reply-container">
-					<a class="feeds-reply-button" href="#" title="Reply">
-						<i class="icon-arrow-left icon-grey"></i>
-						<span>回6</span>
-					</a>
-				</li>
-				<li class="feeds-share-container">
-					<a class="feeds-share-button" href="#" title="Share">
-						<i class="icon-share-alt icon-grey"></i>
-						<span>转7</span>
-					</a>
-				</li>
-				<li class="feeds-favorite-container">
-					<a class="feeds-favorite-button" href="#" title="Favorite">
-						<i class="icon-star-empty icon-grey"></i>
-						<span class="notfavorited">收12</span>
-					</a>
-				</li>
-			</ul>
-			</div>	
-		</li>
-
-
-			
-		<li class="feeds-item">
-			<div class="feeds-item-header">
-				<a class="account-group">
-					<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
-					
-					<strong class="username">Riceman Huang</strong>
-				</a>
-				
-				<span class="feeds-item-course">#
-					<span class="course-name">心理学导论</span>
-					<span class="course-teacher">(吴国宏)</span>
-				#</span>
-				
-				<span class="feeds-timestamp">2小时前</span>
-				<p class="feeds-text">
-					米池！卷土重来！
-				</p>
-			</div>
-		</li>
+					<span class="feeds-item-course">#
+						<span class="course-name">心理学导论</span>
+						<span class="course-teacher">(吴国宏)</span>
+					#</span>
 		
+					<span class="feeds-timestamp">2小时前</span>
+				</div>
+				<div class="feeds-item-content">
+					<p class="feeds-text">
+						点我，我会单独出列哦亲！
+					</p>	
+				</div>
+				
+				<!-- Feeds-Item-Footer -->
+				<div class="feeds-item-footer">
+				<ul class="feeds-item-status inline text-left">
+					<li id="can-expand" class="icon-chevron-down icon-grey"></li>
+					<li id="have-pics" class="icon-picture icon-grey"></li>
+				</ul>
+				
+				
+				<ul class="feeds-actions inline text-right">
+					<li class="feeds-comment-container">
+						<a class="feeds-comment-button">
+							<i class="ui-icon-comment" href="#"></i>
+							<span>回18</span>
+						</a>
+					</li>
+					<li class="feeds-share-container">
+						<a class="feeds-share-button" href="#" title="Share">
+							<i class="icon-share-alt icon-grey"></i>
+							<span>转7</span>
+						</a>
+					</li>
+					<li class="feeds-favorite-container">
+						<a class="feeds-favorite-button" href="#" title="Favorite">
+							<i class="icon-star-empty icon-grey"></i>
+							<span class="notfavorited">收12</span>
+						</a>
+						
+						<a class="feeds-favorite-button-done hide" href="#" title="Favorite">
+							<i class="icon-star"></i>
+							<span class="favorited">已收</span>
+						</a>
+						
+					</li>
+				</ul>
+				</div>	
+			</div>
+			
+			<!-- Feed-Replies -->
+			<div class="feed-replies hide">
+				<div class="reply-box">
+					<form>	
+						<textarea class="mini-reply-box" placeholder="亲，回点啥吧~"></textarea>
+						<div class="reply-box-actions">
+							<div class="reply-checkbox"><input type="checkbox" checked>发送到我的新鲜事</div>
+							<div class="feed-reply-button pull-right">
+								<span class="reply-word-counter">225</span>
+								<button type="button" class="btn btn-small" data-loading-text="发布ing...">回复</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="replies-wrapper">
+					<ol>
+					</ol>
+				</div>
+			</div>
+		</li>
+
+			
 		<li class="feeds-item">
-			<div class="feeds-item-header">
-				<a class="account-group">
-					<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+			<div class="feeds-body">
+				<div class="feeds-item-header">
+					<a class="account-group">
+						<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+						
+						<span class="username">Riceman Huang</span>
+					</a>
 					
-					<strong class="username">Riceman Huang</strong>
-				</a>
+					<span class="feeds-item-course">#
+						<span class="course-name">心理学导论</span>
+						<span class="course-teacher">(吴国宏)</span>
+					#</span>
+		
+					<span class="feeds-timestamp">2小时前</span>
+				</div>
+				<div class="feeds-item-content">
+					<p class="feeds-text">
+						点我，我会单独出列哦亲！
+					</p>	
+				</div>
 				
-				<span class="feeds-item-course">#
-					<span class="course-name">心理学导论</span>
-					<span class="course-teacher">(吴国宏)</span>
-				#</span>
+				<!-- Feeds-Item-Footer -->
+				<div class="feeds-item-footer">
+				<ul class="feeds-item-status inline text-left">
+					<li id="can-expand" class="icon-chevron-down icon-grey"></li>
+					<li id="have-pics" class="icon-picture icon-grey"></li>
+				</ul>
 				
-				<span class="feeds-timestamp">2小时前</span>
-				<p class="feeds-text">
-					<a href="">@Hokashao</a>
-					米池！卷土重来！lalala
-				</p>
+				
+				<ul class="feeds-actions inline text-right">
+					<li class="feeds-comment-container">
+						<a class="feeds-comment-button">
+							<i class="ui-icon-comment" href="#"></i>
+							<span>回18</span>
+						</a>
+					</li>
+					<li class="feeds-share-container">
+						<a class="feeds-share-button" href="#" title="Share">
+							<i class="icon-share-alt icon-grey"></i>
+							<span>转7</span>
+						</a>
+					</li>
+					<li class="feeds-favorite-container">
+						<a class="feeds-favorite-button" href="#" title="Favorite">
+							<i class="icon-star-empty icon-grey"></i>
+							<span class="notfavorited">收12</span>
+						</a>
+						
+						<a class="feeds-favorite-button-done hide" href="#" title="Favorite">
+							<i class="icon-star"></i>
+							<span class="favorited">已收</span>
+						</a>
+						
+					</li>
+				</ul>
+				</div>	
+			</div>
+			
+			<!-- Feed-Replies -->
+			<div class="feed-replies hide">
+				<div class="reply-box">
+					<form>	
+						<textarea class="mini-reply-box" placeholder="亲，回点啥吧~"></textarea>
+						<div class="reply-box-actions">
+							<div class="reply-checkbox"><input type="checkbox" checked>发送到我的新鲜事</div>
+							<div class="feed-reply-button pull-right">
+								<span class="reply-word-counter">225</span>
+								<button type="button" class="btn btn-small" data-loading-text="发布ing...">回复</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="replies-wrapper">
+					<ol>
+					</ol>
+				</div>
 			</div>
 		</li>
 		
@@ -512,21 +719,31 @@
 
 
 
-
-
-
     
     
     
 
 <!-- Jquery JS-->
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<script src="js/library/jquery-1.9.1.js"></script>
+
 
 <!-- Bootstrap JS-->
 <script src="js/bootstrap.js"></script>
 
+
+
 <script src="js/speak.js"></script>
+
+<!-- Textarea 自适应大小-->
+<script src="js/textarea.js"></script>
+
+<!-- At.js -->
+<script src="js/library/jquery.atwho.js"></script>
+
+
+<script type="text/javascript" src="js/at.js"></script>
+
+
 <script src="js/feeds.js"></script>
 
 </body>

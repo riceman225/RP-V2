@@ -1,21 +1,31 @@
 $(document).ready(function(){
 
+//Account Group
+	$(".account-group").hover(function(){
+		$(".username", this).toggleClass("username-hover");
+	});
+
+
+
+
 //Show Feed-Actions
 
 	$(".feeds-item").mouseenter(function(){
 		$(this).addClass("item-activated");
-		$(".item-activated .feeds-actions").css("visibility","visible");
+		$(".feeds-actions",this).css("visibility","visible");
 	});
 
 
 	$(".feeds-item").mouseleave(function(){
-		$(".item-activated .feeds-actions").css("visibility","hidden");
-		$(this).removeClass("item-activated");
+		if ($(".feed-replies", this).is(':visible')) {
+			$(this).removeClass("item-activated");
+		} else {
+			$(".feeds-actions", this).css("visibility","hidden");
+			$(this).removeClass("item-activated");
+		};
 	});
 	
 	
-
-
 
 //New Feeds Click
 	$(".new-feeds-bar").click(function(){
@@ -92,10 +102,32 @@ $(document).ready(function(){
 		$(".item-activated").toggleClass("feeds-item-click");
 		$(".item-activated").prev(".feeds-item").toggleClass("sep-prev-feed");
 		$(".item-activated").next(".feeds-item").toggleClass("sep-next-feed");
+		$(".item-activated .feed-replies").slideToggle(200);	
 	});
+	
+//点击feed中其他元素不要触发上面这个feed click事件
+   $(".feeds-item-header > a, .feed-replies, .feeds-item-content > .feeds-text > #user-id").click(function(e) {
+        e.stopPropagation();
+   });
 
 
+
+
+// Reply-box Textarea 高度自适应
+	$('.mini-reply-box').tah({
+		moreSpace:1,   //输入框底部预留的空白, 默认10, 单位像素
+		maxHeight:100,  //指定Textarea的最大高度, 默认600, 单位像素
+		animateDur:200  //调整高度时的动画过渡时间, 默认200, 单位毫秒
+	});
+	
+// 回复评论
+	$('.replies-actions').click(function(){
+		var userName = $(this).parents(".replies-item").find(".username").html();
+		$(".item-activated textarea").text("@" + userName + " ");
+	});
+	
 });
+
 
 
 

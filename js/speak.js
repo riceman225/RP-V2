@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+
 	$('#mini-speak-box').focus(function(){
         $(".mini-speak-box").addClass("hide");
         $(".rich-speak-box").removeClass("hide");
@@ -14,11 +16,25 @@ $(document).ready(function(){
 		}
 	});
 
+	
+	
+
+//左边 我说 的wordcount
 	var maxLength = 225; // max number of allowed characters
 	$('.rich-speak-text').keyup(function() {
 		$(this).val($(this).val().substr(0, maxLength));
 		$('.speak-word-counter').text(maxLength - $(this).val().length);
 	});
+	
+//replybox的wordcount
+
+	$('.mini-reply-box').keyup(function() {
+		$(this).val($(this).val().substr(0, maxLength));
+		$('.reply-word-counter').text(maxLength - $(this).val().length);
+	});
+
+
+
 
 });
 

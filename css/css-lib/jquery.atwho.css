@@ -1,0 +1,15 @@
+#at-view {position:absolute;top:0;left:0;display:none;margin-top:18px;background:#fff;border:1px solid #DDD;border-radius:3px;box-shadow:0 0 5px rgba(0,0,0,.1);min-width:120px;z-index:10}
+
+#at-view .cur{background:#f9f9f9;color:#298290;font-weight: bold}
+
+#at-view .cur small{color:#666}
+
+#at-view strong{color:#f9f9f9;font-weight: bold}
+
+#at-view .cur strong{color:#298290;font:bold}
+
+#at-view ul{list-style:none;padding:0;margin:auto}
+
+#at-view ul li{display:block;padding:5px 10px;border-bottom:1px solid #DDD;cursor:pointer}
+
+#at-view small{font-size:smaller;color:#666;font-weight:400}
