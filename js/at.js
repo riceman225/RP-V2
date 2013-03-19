@@ -2,7 +2,7 @@
 $(function(){
 
 
-	var names = ["Jacob","Isabella","Ethan","Emma","Michael","Olivia","Alexander","Sophia","William","Ava","Joshua","Emily","Daniel","Madison","Jayden","lepture","Abigail","Noah","Chloe","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","你好","你你你", "高富帅","黄季业","Riceman","Hoka Shao"
+	var names = ["Jacob","Isabella","Ethan","Emma","Michael","Olivia","Alexander","Sophia","William","Ava","Joshua","Emily","Daniel","Madison","Jayden","lepture","Abigail","Noah","Chloe","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","你好","你你你", "高富帅","黄季业","Riceman","Hoka Shao","朱恬骅","Zhuth"
     ];
     
     var courses = ["心理学导论","Java程序设计","概率论","高等数学A","ABCDEFG课程","HIJKLMN课"

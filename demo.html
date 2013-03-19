@@ -1,0 +1,37 @@
+<!doctype html>
+
+<meta charset="utf-8" />
+
+<title>autoResize demo</title>
+
+<style>
+	body {
+		width: 700px;
+		font-family: sans-serif;
+	}
+	h1 {
+		margin: 0;
+		padding: 10px 0 20px;
+	}
+	textarea, input {
+		font-family: inherit;
+		font-size: 1em;
+	}
+	textarea { display: block; width: 200px; }
+</style>
+
+<h1>Textarea</h1>
+
+<textarea></textarea>
+
+<h1>Input</h1>
+
+<input />
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script src="js/jquery.autoresize.js"></script>
+<script>
+	$('*').autoResize({minHeight:10,minWidth:300});
+</script>

@@ -5,18 +5,12 @@
 
 
 
-
 /* Generally Customize BootStrap*/
-
 
 
 body {
 	padding-top:76px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.row-fluid .span4 {
-	width: 282px;
 }
 
 .narrow-container {
@@ -149,6 +143,39 @@ button.btn-small {
 }
 
 
+
+textarea, input[type="text"] {
+	background: #fff;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	line-height: 1.5em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	height:20px; 
+	padding: 10px 12px;  
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+		    border-radius: 4px;	    
+	border: 1px solid #f3f3f3;
+	-webkit-box-shadow: none;
+	-moz-box-shadow:  none;
+	box-shadow: none;
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s;
+	overflow: hidden;
+	margin-bottom: 0;
+}
+
+textarea:focus, textarea:active, input[type="text"]:focus, input[type="text"]:active {
+	border-color: rgba(59, 179, 195, 0.8);
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
 
 
 
@@ -323,7 +350,7 @@ button.btn-small {
 }
 
 .mini-profile-stats ul li a:hover {
-	background-color:#f9f9f9;
+	color:#298290;
 }
 
 .mini-profile-stats ul li:first-child a {
@@ -342,94 +369,59 @@ button.btn-small {
 .mini-profile .mini-speak-box {
 	line-height: 1;
 	padding: 10px 12px;
-	background-color: #fff;
+	background-color: #fbfbfb;
 	-webkit-border-radius: 0 0 5px 5px;
 	   -moz-border-radius: 0 0 5px 5px;
 		    border-radius: 0 0 5px 5px;
 }
 
 .mini-profile .mini-speak-box form {
-	margin-bottom:8px;
+	margin-bottom:0;
 }
 
 .mini-profile .mini-speak-box form input[type="text"] {
-	margin-bottom: 0;
-	width:243px;
-	font-size: 14px;
-	padding: 8px 0 9px 10px;
-	text-indent: 1px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	border:1px solid #f3f3f3;
-	background-color: #fcfcfc;
+	width:255px;
+	height:40px;
 }
 
-/* Rich Compose Box */
+
+/* Rich Speak Box */
 .rich-speak-box {
 	line-height: 1;
-	padding: 10px 12px;
-	min-height: 124px;
-	background-color: #fff;
+	padding: 15px 12px 0 12px;
+	background-color: #fbfbfb;
 	-webkit-border-radius: 0 0 5px 5px;
 	   -moz-border-radius: 0 0 5px 5px;
 		    border-radius: 0 0 5px 5px;
 }
 
 .mini-profile .rich-speak-box form {
+	padding-bottom: 8px;
 	margin-bottom: 0;
 }
 
 .mini-profile .rich-speak-box textarea {
-	width:243px;
-	height:80px;
-	padding: 4px 6px;
-	margin:0;
-	vertical-align: top;
+	width:255px;
 }
 
-textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-	background-color: #ffffff;
-	border:1px solid #f3f3f3;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
-	-webkit-transition:none;
-	-moz-transition:none;
-	-o-transition:none;
-	transition:none;
-}
-
-
-textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
-	border-color: rgba(59, 179, 195, 0.8);
-	outline: 0;
-	outline: thin dotted 9;
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
+.rich-speak-box .rich-speak-box-actions {
+	margin-top:4px;
 }
 
 .photo-upload {
-	float: left;
-	margin-top:3px;
+	display: inline;
 }
 
 /*高手做的input file*/
 .btn_addPic{  
-	display: block;  
 	position: relative;  
 	width: 80px;  
 	height: 39px;  
 	overflow: hidden;  
 	color: #999999;  
 	cursor: pointer;  
-	text-align: center;  
 }  
-.btn_addPic span{display: block;line-height: 39px;}  
+.btn_addPic span{line-height: 39px;}  
 .btn_addPic em {  
 	background:url("../img/twitter_web_sprite_icons.png") -60px -530px;  
 	display: inline-block;  
@@ -441,41 +433,40 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 	vertical-align: middle;  
 }  
 .btn_addPic:hover em{background-position:-60px -590px;}
-.filePrew {  
+input.filePrew {  
 	display: block;  
 	position: absolute;  
 	top: 0;  
 	left: 0;  
 	width: 80px;  
 	height: 39px;  
-	font-size: 100px; /* 增大不同浏览器的可点击区域 */  
+	font-size: 40px; /* 增大不同浏览器的可点击区域 */  
 	opacity: 0; /* 实现的关键点 */  
 	filter:alpha(opacity=0);/* 兼容IE */  
 }  
 
 
 
-
-
 .speak-button {
+	float:right;
+	display: inline;
 	margin-right: 2px;
-	margin-top:7px;
+	margin-top:6px;
 }
 
 .speak-button .speak-word-counter {
 	margin-right:5px;
 	color: #999;
-	display: inline-block;
-	width: 35px;
+
 	border: 0;
 	padding: 0 3px;
-	position: relative;
-	vertical-align: top;
-	top: 7px;
+	vertical-align: middle;
 	text-align: right;
-	font-size: 14px;
+	font-size: 13px;
 	text-shadow: 0 1px 1px rgba(255,255,255,.75);
 }
+
+
 
 @media (max-width: 980px) {
 /* Enable use of floated navbar text */
@@ -585,7 +576,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 }
 
 .feeds-body {
-	padding: 9px 12px;
+	padding: 12px 15px;
 	min-height: 65px;
 }
 
@@ -624,8 +615,9 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 	border-top-right-radius: 4px;
 }
 
-.feeds-item-header, .feeds-item-content, .feeds-item-footer {
-	margin-left: 66px;
+.feeds-item-footer {
+	margin-left:66px;
+	display:inline;
 }
 
 .feeds-text {
@@ -635,11 +627,12 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 
 
 .feeds-item-footer ul {
-	display: inline;
+	display: inline-block;
 }
 
 .feeds-item-footer .feeds-actions {
 	float:right;
+	margin-top:5px;
 }
 
 .feeds-item-footer a {
@@ -649,23 +642,23 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 }
 
 .user-avater {
-	position: absolute;
-	top: 14px;
-	left: 12px;
 	width: 54px;
 	height: 54px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 	cursor: pointer;
+	float: left;
+	margin-right: 15px;
 }
 
 .feeds-item-course {
-	padding-left:10px;
-	padding-top: 15px;
+	padding-left: 10px;
 	text-decoration: none;
 	color: #999;
-	font-size:12px;
+	font-size: 12px;
+	vertical-align: top;
+	display: inline-block;
 }
 
 .feeds-timestamp {
@@ -694,7 +687,58 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 }
 
 
+	/* 转发内容 */
+	.share-content-wrapper {
+		margin:10px 0 0 66px;
+		font-size:13px;
+	}
+
+	.share-content-wrapper .well {
+		padding:12px 5px 5px 20px;
+		background-color: #fcfcfc;
+		margin-bottom: 0;
+		border: none;
+		border-radius: 0;
+		margin-left:10px;
+		margin-right:10px
+	}
+	
+	.share-content-wrapper .feeds-item-header {
+		margin-left:0;
+	}
+	
+
+	
+	.share-content-wrapper .feeds-item-content {
+		margin-left:0;
+	}
+
+		
+	.share-content-wrapper .feeds-item-course {
+		display: inline-block;
+		padding-top: 0;
+	}
+
+	.share-content-wrapper .feeds-item-footer {
+		margin-left: 0;
+	}
+
+	.share-content-wrapper .expanded-content {
+		margin: 0;
+	}
+	
+	.feeds-item .media-container {
+		margin:10px 0 0 5px
+	}
+
+
+
+
 /* Feeds Actions  */
+.feeds-item-status {
+	min-height: 20px;
+}
+
 .feeds-actions i {
 	margin-top:0;
 }
@@ -728,6 +772,31 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 	}
 
 
+/* Feed Details */
+.expanded-content {
+	margin:10px 0 0 66px;
+}
+
+.media-container .media-picture {
+	max-width: 500px;
+	max-height: 375px;
+}
+
+.media-container .media-picture img {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	width:150px;
+}
+
+.media-container .media-picture img.zoom-image {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width:500px;
+}
+
+
 /* Feed Replies */
 .feed-replies form {
 	margin:0;
@@ -735,7 +804,6 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 
 .feed-replies {
 	position: relative;
-	margin-top:12px;
 	padding: 8px;
 	background: #fcfcfc;
 	border-top: 1px solid #f3f3f3;
@@ -750,27 +818,12 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 
 .feed-replies .reply-box textarea {
 	width:480px;
-	height:20px;
-	padding: 10px 12px;
-	-webkit-border-radius: 4px;
-	   -moz-border-radius: 4px;
-		    border-radius: 4px;
-		    
-	border: 1px solid #f3f3f3;
-	-webkit-box-shadow: none;
-	-moz-box-shadow:  none;
-	box-shadow: none;
-	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
-	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
-	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
-	transition: border linear 0.2s, box-shadow linear 0.2s;
 }
-	.feed-replies .reply-box textarea:focus, .feed-replies .reply-box textarea:active  {
-		border-color: rgba(59, 179, 195, 0.8);
-	}
 
 .feed-replies .reply-box-actions {
 	padding-bottom:15px;
+	width: 480px;
+	margin-top: 10px;
 }
 
 
@@ -876,6 +929,7 @@ textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[ty
 .feeds-item-header .username {
 	color:#333;
 	font-weight: bold;
+	vertical-align: top;
 }
 
 .username-hover {

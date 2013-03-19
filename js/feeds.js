@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
 //Account Group
 	$(".account-group").hover(function(){
 		$(".username", this).toggleClass("username-hover");
@@ -9,12 +10,15 @@ $(document).ready(function(){
 
 //Show Feed-Actions
 	$(".feeds-actions").hide();
+
 	$(".feeds-item").hover(function(){
 		$(this).toggleClass("item-activated");
+		if($(this).hasClass("open-reply-box")){
+			return;
+		}
 		$(".feeds-actions",this).toggle();
-	});
-	
-	
+	});	
+
 
 //New Feeds Click
 	$(".new-feeds-bar").click(function(){
@@ -57,21 +61,25 @@ $(document).ready(function(){
 
 
 // Seperate Single Feed
-// If the first feed is clicked
-	$(".feeds-item:first").click(function(){
-		$(".item-activated").toggleClass("first-feed-item-click");
+
+	$(".feeds-item").click(function(){
+		$(this).toggleClass("open-reply-box"); //帮助判断Show Feed Actions是否要进行toggle
+	// If the first feed is clicked
+    	index = $(this).index();
+		if (index === 0) {
+			$(this).toggleClass("first-feed-item-click");
+		}
+	// If not the first feed
+		$(this).toggleClass("feeds-item-click");
+		$(this).prev(".feeds-item").toggleClass("sep-prev-feed");
+		$(this).next(".feeds-item").toggleClass("sep-next-feed");
+		
+	// Toggle feed-replies and expanded content	
+	//	$(".feed-replies, .expanded-content",this).slideToggle(200);
+		$(".feed-replies",this).slideToggle(200);
 	});
 
-	
-// If not the first feed is clicked	
-	$(".feeds-item").click(function(){
-		$(".item-activated").toggleClass("feeds-item-click");
-		$(".item-activated").prev(".feeds-item").toggleClass("sep-prev-feed");
-		$(".item-activated").next(".feeds-item").toggleClass("sep-next-feed");
-		$(".item-activated .feed-replies").slideToggle(200);
-	});
-	
-	
+
 	
 //点击feed中其他元素不要触发上面这个feed click事件
    $(".feeds-item-header > a, .feed-replies, .feeds-item-content > .feeds-text > #user-id").click(function(e) {
@@ -79,7 +87,35 @@ $(document).ready(function(){
    });
 
 
-//Share-Feed-Button Click事件
+//feeds-comment-button Click事件
+
+	$(".feeds-comment-container").click(function(event){
+		event.stopImmediatePropagation();
+		$currentItem = $(this).parents(".feeds-item");
+		$currentItem.toggleClass("open-reply-box"); //帮助判断Show Feed Actions是否要进行toggle
+		// If the first feed is clicked
+	    	index = $currentItem.index();
+			if (index === 0) {
+				$currentItem.toggleClass("first-feed-item-click");
+			}
+		// If not the first feed
+			$currentItem.toggleClass("feeds-item-click");
+			$currentItem.prev(".feeds-item").toggleClass("sep-prev-feed");
+			$currentItem.next(".feeds-item").toggleClass("sep-next-feed");
+			
+		// Toggle feed-replies and expanded content	
+		//	$(".feed-replies, .expanded-content",$currentItem).slideToggle(200);
+			$(".feed-replies",$currentItem).slideToggle(200);
+			
+		// Reply box get focus
+			var userName = $currentItem.find(".feeds-item-header .username").text();
+			var $replyBox = $currentItem.find("textarea");
+			$replyBox.focus().val("@" + userName + " ");
+	});
+
+
+
+//feeds-share-button Click事件
 	$(".feeds-share-button").click(function(event){
 		event.stopImmediatePropagation();
 		var $ShareModalTitle = $(".item-activated .feeds-item-header .username").text();
@@ -92,18 +128,22 @@ $(document).ready(function(){
 	});
 
 
-// Reply-box Textarea 高度自适应
-	$('.mini-reply-box').tah({
-		moreSpace:1,   //输入框底部预留的空白, 默认10, 单位像素
-		maxHeight:200,  //指定Textarea的最大高度, 默认600, 单位像素
-		animateDur:200  //调整高度时的动画过渡时间, 默认200, 单位毫秒
-	});
-	
-	
 // 回复评论
 	$('.replies-actions').click(function(){
 		var userName = $(this).parents(".replies-item").find(".username").text();
-		$(".item-activated textarea").text("@" + userName + " ");
+		var $replyBox = $(this).parents(".feed-replies").find("textarea");
+		$replyBox.focus().val("@" + userName + " ");
+	});
+
+
+// 图片放大缩小
+	$('.feeds-image').mouseover(function() {
+		$(this).css("cursor","pointer");
+	});
+	
+	$(".feeds-image").click(function(event){
+		event.stopImmediatePropagation();
+		$(this).toggleClass("zoom-image");
 	});
 	
 });

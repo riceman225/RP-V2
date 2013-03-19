@@ -11,7 +11,6 @@
 	<link href="css/bootstrap-responsive.css" rel="stylesheet" />
 	<link href="css/main.css" rel="stylesheet" media="screen" />
 	<link href="css/css-lib/jquery.atwho.css" rel="stylesheet" type="text/css"/>
-	
 </head>
   
   
@@ -103,24 +102,27 @@
 		
 		<div class="mini-speak-box">
 		<form>
-			<input type="text" id="mini-speak-box" placeholder="亲，来点学术的~">
+			<input type="text" class="expanding" id="mini-speak-box" placeholder="亲，来点学术的~">
 		</form>
 		</div>
-		
+	
 		
 		<div class="rich-speak-box hide">
 		<form class="rich-speak-form" method="post" target="" action="">
 		    <div class="rich-composebox-content">  
-		        <textarea class="rich-speak-text"></textarea>
+		        <textarea class="rich-speak-text expanding"></textarea>
 		    </div>
-			<div class="photo-upload">
-				<a class="btn_addPic" href="javascript:void(0);"><span><em>+</em>添加图片</span> <input class="filePrew" title="支持jpg、jpeg、gif、png格式，文件小于5M" tabindex="3" type="file" name="pic" size="3"></a>
-			</div>
-			
-			<div class="speak-button pull-right">
-			    <span class="speak-word-counter">225</span>
-			    <button type="button" class="btn btn-primary" data-loading-text="发布ing...">我说</button>
-			</div>
+		    
+		    <div class="rich-speak-box-actions">
+				<div class="photo-upload">
+					<a class="btn_addPic" href="javascript:void(0);"><span><em>+</em>添加图片</span> <input class="filePrew" title="支持jpg、jpeg、gif、png格式，文件小于5M" tabindex="3" type="file" name="pic" size="3"></a>
+				</div>
+				
+				<div class="speak-button">
+				    <span class="speak-word-counter">225</span>
+				    <button type="button" class="btn btn-primary" data-loading-text="发布ing...">我说</button>
+				</div>
+		    </div>
 		</form>
 		
 		</div>
@@ -171,7 +173,6 @@
 	
 	<div class="feeds-content">
 	<ol class="unstyled">
-	
 		<li class="feeds-item">
 			<div class="feeds-body">
 				<div class="feeds-item-header">
@@ -192,26 +193,31 @@
 					<p class="feeds-text">
 						<a id="user-id">@Hokashao</a>
 						<a id="user-id">@朱恬骅</a>
-						我是演示回复框的
+						我是演示回复框的，我还可以展开查看图片
 					</p>	
 				</div>
 				
+				<!-- Expanded Content -->
+				<div class="expanded-content">
+					<div class="media-container">
+						<div class="media-picture">
+							<img class="feeds-image" src="upload/feed-image/372483.jpg" alt="372483">
+						</div>
+					</div>
+				</div>
+				
+
 				<!-- Feeds-Item-Footer -->
 				<div class="feeds-item-footer">
-				<ul class="feeds-item-status inline text-left">
-					<li id="can-expand" class="icon-chevron-down icon-grey"></li>
-					<li id="have-pics" class="icon-picture icon-grey"></li>
-				</ul>
-				
 				
 				<ul class="feeds-actions inline text-right">
 					<li class="feeds-comment-container">
 						<a class="feeds-comment-button">
-							<i class="ui-icon-comment" href="#"></i>
+							<i class="ui-icon-comment"></i>
 							<span>回18</span>
 						</a>
 					</li>
-
+					
 					<li class="feeds-share-container">
 						<!-- Button to trigger share modal -->
 						<a class="feeds-share-button" href="#ShareModal">
@@ -220,26 +226,29 @@
 					</li>
 
 					<li class="feeds-favorite-container">
-						<a class="feeds-favorite-button" href="#" title="Favorite">
+						<a class="feeds-favorite-button" title="Favorite">
 							<i class="icon-star-empty icon-grey"></i>
 							<span class="notfavorited">收12</span>
 						</a>
 						
-						<a class="feeds-favorite-button-done hide" href="#" title="Favorite">
+						<a class="feeds-favorite-button-done hide" title="Favorite">
 							<i class="icon-star"></i>
 							<span class="favorited">已收</span>
 						</a>
 						
 					</li>
 				</ul>
-				</div>	
+				</div>
+				
+
+				
 			</div>
 			
 			<!-- Feed-Replies -->
 			<div class="feed-replies hide">
 				<div class="reply-box">
 					<form>	
-						<textarea class="mini-reply-box" placeholder="亲，回点啥吧~"></textarea>
+						<textarea class="mini-reply-box expanding" placeholder="亲，回点啥吧~"></textarea>
 						<div class="reply-box-actions">
 							<div class="reply-checkbox"><input type="checkbox" checked>发送到我的新鲜事</div>
 							<div class="feed-reply-button pull-right">
@@ -306,7 +315,129 @@
 					<p class="feeds-text">
 						<a id="user-id">@Hokashao</a>
 						<a id="user-id">@朱恬骅</a>
-						我是演示回复框的
+						我是演示回复框的，我还可以展开查看图片
+					</p>	
+				</div>
+				
+				<!-- Expanded Content -->
+				<div class="expanded-content hide">
+					<div class="media-container">
+						<div class="media-picture">
+							<img src="upload/feed-image/372483.jpg" alt="372483">
+						</div>
+					</div>
+				</div>
+				
+
+				<!-- Feeds-Item-Footer -->
+				<div class="feeds-item-footer">
+				
+				<ul class="feeds-actions inline text-right">
+					<li class="feeds-comment-container">
+						<a class="feeds-comment-button">
+							<i class="ui-icon-comment" href="#"></i>
+							<span>回18</span>
+						</a>
+					</li>
+
+					<li class="feeds-share-container">
+						<!-- Button to trigger share modal -->
+						<a class="feeds-share-button" href="#ShareModal">
+							<i class="icon-share-alt icon-grey"></i><span>转7</span>
+						</a>
+					</li>
+
+					<li class="feeds-favorite-container">
+						<a class="feeds-favorite-button" title="Favorite">
+							<i class="icon-star-empty icon-grey"></i>
+							<span class="notfavorited">收12</span>
+						</a>
+						
+						<a class="feeds-favorite-button-done hide" title="Favorite">
+							<i class="icon-star"></i>
+							<span class="favorited">已收</span>
+						</a>
+						
+					</li>
+				</ul>
+				</div>
+				
+
+				
+			</div>
+			
+			<!-- Feed-Replies -->
+			<div class="feed-replies hide">
+				<div class="reply-box">
+					<form>	
+						<textarea class="mini-reply-box expanding" placeholder="亲，回点啥吧~"></textarea>
+						<div class="reply-box-actions">
+							<div class="reply-checkbox"><input type="checkbox" checked>发送到我的新鲜事</div>
+							<div class="feed-reply-button pull-right">
+								<span class="reply-word-counter">225</span>
+								<button type="button" class="btn btn-small" data-loading-text="发布ing...">回复</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="replies-wrapper">
+					<ol>
+						<li class="replies-item">
+							<div class="replies-item-header">
+								<a class="account-group">
+									<img class="replies-user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+									<div class="username">朱恬骅</div>
+								</a>
+							</div>
+							<div class="replies-item-content">
+								<p>你前端写的太慢啦！！！</p>
+								<span>
+									<a class="replies-actions">回复</a>
+								</span>
+							</div>
+
+						</li>
+						<li class="replies-item">
+							<div class="replies-item-header">
+								<a class="account-group">
+									<img class="replies-user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+									<div class="username">Hoka Shao</div>
+								</a>
+							</div>
+							<div class="replies-item-content">
+								<p><a>@朱恬骅</a> 我也觉得！！！</p>
+								<span>
+									<a class="replies-actions">回复</a>
+								</span>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</div>						
+		</li>
+	
+	
+		<li class="feeds-item">
+			<div class="feeds-body">
+				<div class="feeds-item-header">
+					<a class="account-group">
+						<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+						
+						<span class="username">Riceman Huang</span>
+					</a>
+					
+					<span class="feeds-item-course">#
+						<span class="course-name">心理学导论</span>
+						<span class="course-teacher">(吴国宏)</span>
+					#</span>
+		
+					<span class="feeds-timestamp">2小时前</span>
+				</div>
+				<div class="feeds-item-content">
+					<p class="feeds-text">
+						<a id="user-id">@Hokashao</a>
+						<a id="user-id">@朱恬骅</a>
+						如果我的内容很长。。。。有两行两行会怎么样啊啊啊 two lines 啊，会怎么样啊啊。。。应该不会怎么样才对啊！！！！
 					</p>	
 				</div>
 				
@@ -321,7 +452,7 @@
 				<ul class="feeds-actions inline text-right">
 					<li class="feeds-comment-container">
 						<a class="feeds-comment-button">
-							<i class="ui-icon-comment" href="#"></i>
+							<i class="ui-icon-comment"></i>
 							<span>回18</span>
 						</a>
 					</li>
@@ -334,12 +465,12 @@
 					</li>
 					
 					<li class="feeds-favorite-container">
-						<a class="feeds-favorite-button" href="#" title="Favorite">
+						<a class="feeds-favorite-button" title="Favorite">
 							<i class="icon-star-empty icon-grey"></i>
 							<span class="notfavorited">收12</span>
 						</a>
 						
-						<a class="feeds-favorite-button-done hide" href="#" title="Favorite">
+						<a class="feeds-favorite-button-done hide" title="Favorite">
 							<i class="icon-star"></i>
 							<span class="favorited">已收</span>
 						</a>
@@ -353,7 +484,158 @@
 			<div class="feed-replies hide">
 				<div class="reply-box">
 					<form>	
-						<textarea class="mini-reply-box" placeholder="亲，回点啥吧~"></textarea>
+						<textarea class="mini-reply-box expanding" placeholder="亲，回点啥吧~"></textarea>
+						<div class="reply-box-actions">
+							<div class="reply-checkbox"><input type="checkbox" checked>发送到我的新鲜事</div>
+							<div class="feed-reply-button pull-right">
+								<span class="reply-word-counter">225</span>
+								<button type="button" class="btn btn-small" data-loading-text="发布ing...">回复</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="replies-wrapper">
+					<ol>
+						<li class="replies-item">
+							<div class="replies-item-header">
+								<a class="account-group">
+									<img class="replies-user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+									<div class="username">朱恬骅</div>
+								</a>
+							</div>
+							<div class="replies-item-content">
+								<p>你前端写的太慢啦！！！</p>
+								<span>
+									<a class="replies-actions">回复</a>
+								</span>
+							</div>
+
+						</li>
+						<li class="replies-item">
+							<div class="replies-item-header">
+								<a class="account-group">
+									<img class="replies-user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+									<div class="username">Hoka Shao</div>
+								</a>
+							</div>
+							<div class="replies-item-content">
+								<p><a>@朱恬骅</a> 我也觉得！！！</p>
+								<span>
+									<a class="replies-actions">回复</a>
+								</span>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</li>
+		
+	
+		<li class="feeds-item">
+			<div class="feeds-body">
+				<div class="feeds-item-header">
+					<a class="account-group">
+						<img class="user-avater" src="upload/avater/user1.jpg" alt="Riceman Huang">
+						
+						<span class="username">Riceman Huang</span>
+					</a>
+					
+					<span class="feeds-item-course">#
+						<span class="course-name">心理学导论</span>
+						<span class="course-teacher">(吴国宏)</span>
+					#</span>
+		
+					<span class="feeds-timestamp">2小时前</span>
+				</div>
+				<div class="feeds-item-content">
+					<p class="feeds-text">
+						<a id="user-id">@Hokashao</a>
+						<a id="user-id">@朱恬骅</a>
+						我是演示转发feed的。勾选了”回复并发送到新鲜事“的也是我！
+					</p>	
+				</div>
+				
+				<!-- Feed-Share-Content-->
+				<div class="share-content-wrapper">
+				<div class="well">
+					<!-- 被转发的内容 -->
+					<div class="feeds-item-header">
+						<a class="account-group">							
+							<span class="username">Riceman Huang</span>
+						</a>
+						
+						<div class="feeds-item-course">#
+							<span class="course-name">心理学导论</span>
+							<span class="course-teacher">(吴国宏)</span>
+						#</div>
+			
+					</div>
+					<div class="feeds-item-content">
+						<p class="feeds-text">
+							<a id="user-id">@Hokashao</a>
+							<a id="user-id">@朱恬骅</a>
+							我是被转发的坑爹啊！(哦对了我也可以是被回复的。。。)
+						</p>	
+					</div>
+				
+					
+					<!-- Expanded Content -->
+					<div class="expanded-content">
+						<div class="media-container">
+							<div class="media-picture">
+								<img class="feeds-image" src="upload/feed-image/372483.jpg" alt="372483">
+							</div>
+						</div>
+					</div>
+				</div>				
+				</div>
+				
+				
+				
+				
+				<!-- Feeds-Item-Footer -->
+				<div class="feeds-item-footer">
+				<ul class="feeds-item-status inline text-left">
+<!--					<li id="have-pics" class="icon-picture icon-grey"></li>  -->
+				</ul>
+				
+				
+				<ul class="feeds-actions inline text-right">
+					<li class="feeds-comment-container">
+						<a class="feeds-comment-button">
+							<i class="ui-icon-comment"></i>
+							<span>回18</span>
+						</a>
+					</li>
+					
+					<li class="feeds-share-container">
+						<!-- Button to trigger share modal -->
+						<a class="feeds-share-button" href="#ShareModal">
+							<i class="icon-share-alt icon-grey"></i><span>转7</span>
+						</a>
+					</li>
+					
+					<li class="feeds-favorite-container">
+						<a class="feeds-favorite-button" title="Favorite">
+							<i class="icon-star-empty icon-grey"></i>
+							<span class="notfavorited">收12</span>
+						</a>
+						
+						<a class="feeds-favorite-button-done hide" title="Favorite">
+							<i class="icon-star"></i>
+							<span class="favorited">已收</span>
+						</a>
+						
+					</li>
+				</ul>
+				</div>	
+			</div>
+			
+			<!-- Feed-Replies -->
+			<div class="feed-replies hide">
+				<div class="reply-box">
+					<form>	
+						<textarea class="mini-reply-box expanding" placeholder="亲，回点啥吧~"></textarea>
 						<div class="reply-box-actions">
 							<div class="reply-checkbox"><input type="checkbox" checked>发送到我的新鲜事</div>
 							<div class="feed-reply-button pull-right">
@@ -742,7 +1024,7 @@
 		</div>
 		</div>
 		<div class="modal-footer">
-			<button class="btn btn-primary">分享</button>
+			<button class="btn btn-primary">转发</button>
 		</div>
 	</div>
 	
@@ -770,34 +1052,28 @@
 </div>
 
 
-
     
     
     
 
-<!-- Jquery JS-->
+<!-- Jquery Bootstrap Library -->
 <script src="js/library/jquery-1.9.1.js"></script>
+<script src="js/library/bootstrap.js"></script>
+
+<!-- JS Plug-in -->
+	<!-- Textarea 自适应大小-->
+	<script src="js/plug_in/textarea-expanding.js"></script>
+	
+	<!-- At.js -->
+	<script src="js/plug_in/jquery.atwho.js"></script>
+	<script src="js/at.js"></script>
 
 
-<!-- Bootstrap JS-->
-<script src="js/bootstrap.js"></script>
-
-
-
-<script src="js/speak.js"></script>
-
-<!-- Textarea 自适应大小-->
-
-<script src="js/textarea.js"></script>
-
-<!-- At.js -->
-<script src="js/library/jquery.atwho.js"></script>
-
-
-<script type="text/javascript" src="js/at.js"></script>
-
-
+<!-- 所有Feed 动作-->
 <script src="js/feeds.js"></script>
+
+<!-- 发布框 -->
+<script src="js/speak.js"></script>
 
 </body>
   

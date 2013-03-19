@@ -1,0 +1,23 @@
+.example {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    margin-left: 15px;
+    border-bottom: dotted 1px;
+}
+
+textarea {
+  padding: .5em;
+  background: #fff;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 1em;
+  line-height: 1.5em;
+  margin: .5em 0;
+}
+
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
